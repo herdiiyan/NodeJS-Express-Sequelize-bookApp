@@ -21,7 +21,8 @@ exports.findAll = (req, res) => {
 };
 
 exports.findByPk = (req, res) => {
-    Books.findByPk(req.params.id).then(book => {
+    const id = req.params.id;
+    Books.findByPk(id).then(book => {
         res.send(book);
     })
 };
